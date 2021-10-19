@@ -6,6 +6,7 @@ app = Flask(__name__)
 # Prices API Route
 @app.route("/prices")
 def prices():
+    # Send out the request, put it in JSON format and then get the specific dollar amount from that JSON
     coinbase_buy_btc_request = requests.get('https://api.coinbase.com/v2/prices/BTC-USD/buy')
     coinbase_buy_btc_json = json.loads(coinbase_buy_btc_request.text)
     coinbase_buy_btc_request.close()
@@ -49,6 +50,7 @@ def prices():
         kraken_sell_eth
     ]
 
+    # return in JSON format
     return {"prices": prices}
 
 if __name__ == "__main__":
