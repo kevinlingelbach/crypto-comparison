@@ -32,7 +32,18 @@ def prices():
     kraken_buy_eth = float(kraken_eth_json['result']['XETHZUSD']['a'][0])
     kraken_sell_eth = float(kraken_eth_json['result']['XETHZUSD']['b'][0])
 
-    return {"prices": [coinbase_buy_btc, coinbase_sell_btc, coinbase_buy_eth, coinbase_sell_eth, kraken_buy_btc, kraken_sell_btc, kraken_buy_eth, kraken_sell_eth]}
+    prices = [
+        coinbase_buy_btc, 
+        coinbase_sell_btc, 
+        coinbase_buy_eth, 
+        coinbase_sell_eth, 
+        kraken_buy_btc, 
+        kraken_sell_btc, 
+        kraken_buy_eth, 
+        kraken_sell_eth
+    ]
+
+    return {"prices": prices}
 
 if __name__ == "__main__":
     app.run(debug=True)

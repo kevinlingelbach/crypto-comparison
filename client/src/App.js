@@ -20,7 +20,7 @@ function App() {
         <p>Loading...</p>
       ) : (
         data.prices.map((member, i) => (
-          <p key={i}>{member}</p>
+          <p key={i}>{i + 1}: {member}</p>
         ))
       )}
     </div>
