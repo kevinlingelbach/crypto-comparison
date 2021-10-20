@@ -29,6 +29,28 @@ class EthTable extends React.Component {
             }
           )
       }
+
+      buyComparison(price1, price2) {
+        var price1Num = parseFloat(price1)
+        var price2Num = parseFloat(price2)
+
+        if (price1Num < price2Num) {
+            return 'Coinbase'
+        } else {
+            return 'Kraken'
+        }
+    }
+
+    sellComparison(price1, price2) {
+        var price1Num = parseFloat(price1)
+        var price2Num = parseFloat(price2)
+
+        if (price1Num > price2Num) {
+            return 'Coinbase'
+        } else {
+            return 'Kraken'
+        }
+    }
     
       render() {
         const { error, isLoaded, items } = this.state;
@@ -39,7 +61,7 @@ class EthTable extends React.Component {
         } else {
           return (
             <div>
-                <h1>Current Ethereum Prices:</h1>
+                <h2>Current Ethereum Prices:</h2>
                 <table>
                 <thead>
                         <tr>
@@ -58,6 +80,11 @@ class EthTable extends React.Component {
                         ))}
                     </tbody>
                 </table>
+
+                <h3>Recommendations:</h3>
+                <text>Buy Ethereum on: {this.buyComparison(items[0].buy, items[1].buy)}</text>
+                <br/>
+                <text>Sell Ethereum on: {this.sellComparison(items[0].sell, items[1].sell)}</text>
             </div>
           );
         }
