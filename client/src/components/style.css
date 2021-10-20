@@ -1,0 +1,19 @@
+thead {
+  background-color: #333;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2%;
+}
+
+table {
+  width: 30%;
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
