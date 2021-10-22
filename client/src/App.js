@@ -11,7 +11,6 @@ class App extends Component {
         <Title/>
         <BtcTable/>
         <EthTable/>
-
       </div>
     );
   }
