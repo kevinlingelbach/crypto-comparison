@@ -4,6 +4,7 @@ import './style.css'
 import { Button} from 'react-bootstrap';
 
 class BtcTable extends React.Component {
+    // Constructor to set up the state where prices are loaded from the backend
     constructor(props) {
         super(props);
         this.state = {
@@ -13,6 +14,8 @@ class BtcTable extends React.Component {
         };
       }
     
+    
+    // Function that fetches from the backend the various prices and puts them into json format
     componentDidMount() {
         fetch("/btc-prices")
             .then(res => res.json())
@@ -32,6 +35,7 @@ class BtcTable extends React.Component {
             )
     }
 
+    // compares two prices and determines which is one is better for buying
     buyComparison(price1, price2) {
         var price1Num = parseFloat(price1)
         var price2Num = parseFloat(price2)
@@ -43,6 +47,7 @@ class BtcTable extends React.Component {
         }
     }
 
+    // compares two prices and determines which is beter for buying
     sellComparison(price1, price2) {
         var price1Num = parseFloat(price1)
         var price2Num = parseFloat(price2)
@@ -54,6 +59,7 @@ class BtcTable extends React.Component {
         }
     }
     
+    // renders this component
     render() {
         const { error, isLoaded, items } = this.state;
         if (error) {
@@ -61,6 +67,7 @@ class BtcTable extends React.Component {
         } else if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
+            // displays a table of the various prices and displays recommendations using the above functions and buttons to go buy/sell elsewhere
             return (
                 <div>
                     <h2>Current Bitcoin Prices:</h2>

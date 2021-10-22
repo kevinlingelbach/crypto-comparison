@@ -5,6 +5,7 @@ import BtcTable from "./components/btcTable";
 import EthTable from "./components/ethTable";
 
 class App extends Component {
+  // Renders the title and then the two tables
   render() {
     return (
       <div className="App" >
