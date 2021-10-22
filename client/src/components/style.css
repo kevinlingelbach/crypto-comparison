@@ -21,3 +21,15 @@ td {
 body {
   font-family: roboto;
 }
+
+button {
+  background-color: #333;
+
+  font-size: 0.875rem;
+  color: white;
+  font-family: roboto;
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
+}

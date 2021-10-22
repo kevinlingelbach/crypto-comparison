@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css'
 
+import { Button} from 'react-bootstrap';
+
 class BtcTable extends React.Component {
     constructor(props) {
         super(props);
@@ -86,6 +88,16 @@ class BtcTable extends React.Component {
                     <text>Buy Bitcoin on: {this.buyComparison(items[0].buy, items[1].buy)}</text>
                     <br/>
                     <text>Sell Bitcoin on: {this.sellComparison(items[0].sell, items[1].sell)}</text>
+
+                    <h3>Links:</h3>
+
+                    <a href="https://www.coinbase.com/price/bitcoin" target="_blank">
+                        <Button> Buy / Sell Bitcoin on Coinbase! </Button>
+                    </a>
+
+                    <a href="https://www.kraken.com/prices/btc-bitcoin-price-chart/" target="_blank">
+                        <Button> Buy / Sell Bitcoin on Kraken! </Button>
+                    </a>
                 </div>
             );
         }

@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css'
 
+import { Button} from 'react-bootstrap';
+
 class EthTable extends React.Component {
     constructor(props) {
         super(props);
@@ -85,6 +87,16 @@ class EthTable extends React.Component {
                 <text>Buy Ethereum on: {this.buyComparison(items[0].buy, items[1].buy)}</text>
                 <br/>
                 <text>Sell Ethereum on: {this.sellComparison(items[0].sell, items[1].sell)}</text>
+                
+                <h3>Links:</h3>
+
+                <a href="https://www.coinbase.com/price/ethereum" target="_blank">
+                    <Button> Buy / Sell Ethereum on Coinbase! </Button>
+                </a>
+
+                <a href="https://www.kraken.com/prices/eth-ethereum-price-chart/" target="_blank">
+                    <Button> Buy / Sell Ethereum on Kraken! </Button>
+                </a> 
             </div>
           );
         }
