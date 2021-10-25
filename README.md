@@ -19,6 +19,8 @@ Then, run the command `python3 server.py`.
 To install the frontend, navigate to /crypto-comparison/client/ and run the command `npm install`.
 To run the frontend, navigate to /crypto-comparison/client/ and run the command `npm start`.
 
+You will be able to load the page on `localhost:3000`
+
 ## Windows Instructions
 
 To run the backend, navigate to /crypto-comparison/flask-server and switch into the the Python virtual environment using the command `c:\path\to\windows-venv\scripts\activate.bat`.
@@ -27,6 +29,8 @@ Then, run the command `python server.py`.
 
 To install the frontend, navigate to /crypto-comparison/client/ and run the command `npm install`.
 To run the frontend, navigate to /crypto-comparison/client/ and run the command `npm start`.
+
+You will be able to load the page on `localhost:3000`
 
 ## Questionnaire
 
